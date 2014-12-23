@@ -1,0 +1,11 @@
+{application, mimetype_parser, [
+  {description, "parse mimetypes"},
+  {vsn, "0.1.0"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+    kernel,
+    stdlib
+  ]},
+  {env, []}
+]}.

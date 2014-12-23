@@ -1,0 +1,4 @@
+language: erlang
+script: make eunit
+otp_release:
+  - 17.0
