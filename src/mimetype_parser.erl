@@ -27,22 +27,3 @@ to_string(Bin) when is_binary(Bin) ->
     _ ->
       binary_to_list(Bin)
   end.
-
--ifdef(TEST).
--include_lib("eunit/include/eunit.hrl").
-
-parse_test_() ->
-  Tests = [
-    {<<"json">>, [{<<"application">>, <<"json">>, #{}}]},
-    {<<"hyper+json">>, [{<<"application">>, <<"hyper+json">>, #{}}]},
-    {<<"html">>, [{<<"text">>, <<"html">>, #{}}]},
-    {<<"html, json">>, [{<<"text">>, <<"html">>, #{}},
-                        {<<"application">>, <<"json">>, #{}}]},
-    {<<"application/xml">>, [{<<"application">>, <<"xml">>, #{}}]},
-    {<<"text/xml">>, [{<<"text">>, <<"xml">>, #{}}]},
-    {<<"rdf; param=123">>, [{<<"application">>, <<"rdf+xml">>, #{<<"param">> => <<"123">>}}]},
-    {<<"application/hyper+json; profile=users; version=1.0">>, [{<<"application">>, <<"hyper+json">>, #{<<"profile">> => <<"users">>, <<"version">> => <<"1.0">>}}]}
-  ],
-  [fun() -> {ok, E} = parse(I) end || {I, E} <- Tests].
-
--endif.

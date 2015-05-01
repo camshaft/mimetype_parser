@@ -1,4 +1,3 @@
-language: erlang
-script: make eunit
+language: elixir
 otp_release:
-  - 17.0
+  - 17.4
