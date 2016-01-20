@@ -19,7 +19,7 @@ defmodule MimetypeParser.Mixfile do
   end
 
   defp package do
-    [files: ["src/mimetype_parser.erl", "src/*.xrl", "src/*.yrl", "mix.exs", "README*"],
+    [files: ["src/mimetype_parser.erl", "src/*.xrl", "src/*.yrl", "lib/*", "mix.exs", "README*"],
      contributors: ["Cameron Bytheway"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/camshaft/mimetype_parser"}]
