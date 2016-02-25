@@ -9,7 +9,6 @@ argument
 Terminals
 token
 ','
-'+'
 '='
 ';'
 '/'
@@ -31,23 +30,11 @@ mediatype ->
   token '/' token :
   {?value('$1'), ?value('$3'), #{}}.
 mediatype ->
-  token '+' token :
-  {?type('$3'), ?subtype('$1', '$3'), #{}}.
-mediatype ->
-  token '/' token '+' token :
-  {?value('$1'), ?subtype('$3', '$5'), #{}}.
-mediatype ->
   token arguments :
   {?type('$1'), ?short('$1'), '$2'}.
 mediatype ->
   token '/' token arguments :
   {?value('$1'), ?value('$3'), '$4'}.
-mediatype ->
-  token '+' token arguments :
-  {?type('$3'), ?subtype('$1', '$3'), '$4'}.
-mediatype ->
-  token '/' token '+' token arguments :
-  {?value('$1'), ?subtype('$3', '$5'), '$6'}.
 
 arguments ->
   ';' argument :

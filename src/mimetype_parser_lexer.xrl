@@ -1,14 +1,12 @@
 Definitions.
 
 WS = (\s|\t|\r|\n)
-Char = [^\(\)\<\>\@\,\;\:\\\"\/\[\]\?\=\+{WS}]+
+Char = [a-zA-Z0-9\!\#\$\&\.\+\-\^\_]+
 QuotedChar = [^\\\"{WS}]+
 
 Rules.
 
 \,                                   :  {token, {',', TokenLine}}.
-
-\+                                   :  {token, {'+', TokenLine}}.
 
 \=                                   :  {token, {'=', TokenLine}}.
 
