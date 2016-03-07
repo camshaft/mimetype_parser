@@ -3,7 +3,7 @@ defmodule MimetypeParser.Mixfile do
 
   def project do
     [app: :mimetype_parser,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.0",
      description: "parse mimetypes",
      package: package,
