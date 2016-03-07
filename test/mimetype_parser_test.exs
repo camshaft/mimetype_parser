@@ -4,13 +4,14 @@ defmodule MimetypeParserTest do
   cases = [
     {"json", [{"application", "json", %{}}]},
     {"hyper+json", [{"application", "hyper+json", %{}}]},
+    {"extra+hyper+json", [{"application", "extra+hyper+json", %{}}]},
     {"html", [{"text", "html", %{}}]},
     {"html, json", [{"text", "html", %{}},
                     {"application", "json", %{}}]},
     {"application/xml", [{"application", "xml", %{}}]},
     {"text/xml", [{"text", "xml", %{}}]},
     {"rdf; param=123", [{"application", "rdf+xml", %{"param" => "123"}}]},
-    {"application/hyper+json; profile=users; version=1.0", [{"application", "hyper+json", %{"profile" => "users", "version" => "1.0"}}]},
+    {"application/extra+hyper+json; profile=users; version=1.0", [{"application", "extra+hyper+json", %{"profile" => "users", "version" => "1.0"}}]},
     {"application/json; profile=\"http://example.org/users\"", [{"application", "json", %{"profile" => "http://example.org/users"}}]}
   ]
 
