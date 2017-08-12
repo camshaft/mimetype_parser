@@ -6,8 +6,8 @@ defmodule MimetypeParser.Mixfile do
      version: "0.1.2",
      elixir: "~> 1.0",
      description: "parse mimetypes",
-     package: package,
-     deps: deps]
+     package: package(),
+     deps: deps()]
   end
 
   def application do
